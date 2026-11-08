@@ -1,4 +1,4 @@
-# Occasion Creator
+# wish-with-uzeey
 
 ## Local setup
 
