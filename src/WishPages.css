@@ -1,0 +1,70 @@
+.wish-page-shell {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 32px 18px;
+  color: #233d37;
+  background-color: #f5f8f3;
+  background-image: radial-gradient(#d5e4d8 0.8px, transparent 0.8px);
+  background-size: 19px 19px;
+  font-family: "DM Sans", "Trebuchet MS", sans-serif;
+}
+
+.payment-result {
+  width: min(100%, 520px);
+  padding: 36px;
+  border: 1px solid #dfe9e0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 16px 42px rgba(27, 62, 53, .09);
+}
+
+.page-eyebrow { margin: 0 0 26px; color: #a45b48; font-size: 10px; font-weight: 700; letter-spacing: 1.3px; text-transform: uppercase; }
+.payment-result h1, .shared-wish h1 { margin: 0; font-family: "Playfair Display", Georgia, serif; font-size: 32px; font-weight: 600; line-height: 1.2; }
+.payment-result > p:not(.page-eyebrow):not(.page-error) { margin: 12px 0 0; color: #687972; font-size: 14px; line-height: 1.6; }
+.status-mark { display: grid; width: 48px; height: 48px; place-items: center; margin: 0 0 20px; border-radius: 50%; color: #fff; background: #367b68; font-size: 23px; }
+.status-spinner { width: 32px; height: 32px; margin: 0 0 22px; border: 3px solid #dce8df; border-top-color: #367b68; border-radius: 50%; animation: wish-spin .8s linear infinite; }
+@keyframes wish-spin { to { transform: rotate(360deg); } }
+.share-link-row { display: flex; align-items: center; gap: 8px; padding: 7px; margin-top: 24px; border: 1px solid #dce7df; border-radius: 5px; background: #f8faf7; }
+.share-link-row a { overflow: hidden; flex: 1; color: #2c6d5e; font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
+.share-link-row button, .page-primary-button { min-height: 40px; padding: 0 14px; border: 0; border-radius: 4px; color: #fff; background: #1d5b50; font: inherit; font-size: 12px; font-weight: 700; cursor: pointer; }
+.page-primary-link { display: inline-flex; gap: 12px; align-items: center; margin-top: 18px; color: #205d50; font-size: 13px; font-weight: 700; text-decoration: none; }
+.page-primary-button { margin-top: 23px; }
+.page-primary-button:disabled { opacity: .65; cursor: wait; }
+.page-secondary-link { display: block; width: fit-content; margin-top: 16px; color: #65756e; font-size: 12px; }
+.page-error { color: #a43e32; font-size: 12px; }
+.share-loading { color: #60736c; font-size: 14px; }
+
+.shared-wish {
+  width: min(100%, 540px);
+  min-height: 620px;
+  padding: 48px 34px 30px;
+  border: 1px solid rgba(32, 63, 54, .12);
+  border-radius: 18px;
+  color: #4a3037;
+  background: #f5dfe0;
+  box-shadow: 0 25px 65px rgba(27, 62, 53, .16);
+  text-align: center;
+}
+.shared-wish.theme-dark { color: #f3f0e7; background: #202b29; }
+.shared-wish.theme-aesthetic-glow { color: #25443d; background: radial-gradient(ellipse at 50% 20%, #fff8df 0, transparent 46%), linear-gradient(155deg, #dff3e8, #e4e9f4 52%, #f8e5df); }
+.shared-wish .page-eyebrow { margin-bottom: 32px; }
+.shared-wish-art { display: grid; width: 112px; height: 112px; place-items: center; margin: 0 auto 25px; border: 1px solid rgba(255,255,255,.7); border-radius: 50%; color: #fff; background: #bc6672; box-shadow: 0 0 0 12px rgba(255,255,255,.22), 0 14px 30px rgba(114, 68, 74, .19); font-family: Georgia, serif; font-size: 50px; }
+.shared-wish.theme-dark .shared-wish-art { background: #637c74; }
+.shared-wish.theme-aesthetic-glow .shared-wish-art { background: #62a48b; box-shadow: 0 0 35px rgba(104, 194, 157, .55); }
+.shared-wish-theme { margin: 0 0 11px; color: #a55561; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
+.shared-wish.theme-dark .shared-wish-theme { color: #c4d2cb; }
+.shared-wish.theme-aesthetic-glow .shared-wish-theme { color: #397c67; }
+.shared-wish-message { max-width: 400px; margin: 16px auto 0; color: inherit; font-size: 15px; line-height: 1.8; white-space: pre-wrap; }
+.shared-wish-photos { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 10px; margin: 25px 0 0; }
+.shared-wish-photos img { width: 100%; aspect-ratio: 1; border: 3px solid rgba(255,255,255,.78); border-radius: 6px; object-fit: cover; }
+.shared-wish audio { display: block; width: 100%; max-width: 330px; height: 38px; margin: 24px auto 0; }
+.shared-wish-signoff { padding-top: 24px; margin: 28px 0 0; border-top: 1px solid rgba(48, 80, 68, .18); color: inherit; font-family: "Playfair Display", Georgia, serif; font-size: 12px; font-style: italic; }
+
+@media (max-width: 520px) {
+  .payment-result { padding: 27px 21px; }
+  .payment-result h1, .shared-wish h1 { font-size: 28px; }
+  .shared-wish { min-height: 560px; padding: 38px 21px 24px; border-radius: 14px; }
+  .share-link-row { align-items: stretch; flex-direction: column; }
+  .share-link-row a { padding: 8px 4px; }
+}
